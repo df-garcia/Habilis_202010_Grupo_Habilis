@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <div class="card-deck">
+        <div class="card" style="width: 18rem;">
+        <img src="https://gestech.com.co/sitio/wp-content/uploads/Medical-record_-web-1030x675.jpg" class="card-img-top" alt="Card image cap">
+            <div class="card-body">
+                <h1 class="card-title">REALIZAR PEDIDO</h1>
+                <p class="card-text">Consulte una órden médica y solicite sus medicamentos recetados</p>
+                <a href="{% url 'validar' %}" class="btn btn-primary">Continuar</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <img src="https://image.freepik.com/vector-gratis/diseno-ilustracion-vector-icono-orden-medica-aislado_24877-18766.jpg" class="card-img-top" alt="Card image cap">
+            <div class="card-body">
+                <h1 class="card-title">CONSULTAR PEDIDOS</h1>
+                <p class="card-text">Consulte el estado de los pedidos que ha realizado</p>
+                <a href="{% url 'consultar_pedidos' %}" class="btn btn-primary">Continuar</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

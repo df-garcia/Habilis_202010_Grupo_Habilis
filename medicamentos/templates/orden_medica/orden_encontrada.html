@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if orden != None %}
+        <h1>Fecha de Emisión: </h1>{{ orden.emision }}
+        <br>
+        <br>
+        <h1>Fecha de Caducidad:</h1> {{ orden.caducidad }}
+        <br>
+        <br>
+        <h1>Medicamentos: </h1>
+        {% for i in meds %}
+            {{ i.referencia }}
+        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'crear_pedido' %}" style="color:lightskyblue">CONTINUAR</a>
+    {% endif %}
+    {% if orden == None %}
+        <h3>La orden no fue encontrada...</h3>
+        <a href="validar" style="color:lightskyblue;">VOLVER</a>
+    {% endif %}
+{% endblock %}

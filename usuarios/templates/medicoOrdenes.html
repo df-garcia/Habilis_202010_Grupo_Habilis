@@ -1,0 +1,29 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<br>
+<h3>Órdenes registradas</h3>
+<div class="card-columns">
+    {% if tags %}
+        {% for tag in tags %}
+            {% for orden in tag.ordenes %}
+                <div class="card" style="width: 22rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Orden No. {{ orden.numRegistro }}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Emisión: {{ orden.emision }}</h6>
+                        
+                            <p class="card-text">Paciente: {{ orden.cita.paciente.nombre }}</p>
+                            <p class="card-text">Medicamentos recetados:</p>
+                            {% for med in orden.medicamentos.all %}
+                            <p class="card-text">{{med.descripcion}} ({{med.referencia}}) - ${{med.precio}}</p>
+                            {% endfor %}
+
+                        <!-- <a href="#" class="btn btn-primary stretched-link">Learn More</a> -->
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</div><!-- end div card columns -->
+
+{% endblock content %}

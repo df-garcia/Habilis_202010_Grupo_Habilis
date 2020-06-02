@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!--<div class="row">-->
+<!--    <div class="col-12">-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">-->
+<!--                Pedido Producto-->
+<!--            </div>-->
+
+<!--            <div class="form-group col-md-4">-->
+<!--            </div>-->
+
+<!--            <div class="form-group col-md-12">-->
+<!--                <label for="inputState">Cargue la autorización del medicamento</label>-->
+<!--                <div class="input-group mb-3">-->
+<!--                    <div class="input-group-prepend">-->
+<!--                        <span class="input-group-text" id="inputGroupFileAddon03">Upload</span>-->
+<!--                    </div>-->
+<!--                    <div class="custom-file">-->
+<!--                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">-->
+<!--                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="form-group col-md-12">-->
+<!--                <label for="inputCant">Numero de Registro</label>-->
+<!--                <input type="Cantidad" class="form-control" id="inputRegistro">-->
+<!--            </div>-->
+
+<!--              <div class="form-group col-md-12">-->
+<!--                <label for="inputCant">Fecha de redicacion</label>-->
+<!--                <input type="date" id="start" name="trip-start" value="" min="2018-01-01" max="2040-12-31">-->
+<!--            </div>-->
+
+<!--            <div class="form-group col-md-12">-->
+<!--                <label for="inputState">Producto</label>-->
+<!--                <select id="inputState" class="form-control">-->
+<!--                    <option selected>Choose...</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--            <div class="form-group col-md-12">-->
+<!--                <label for="inputCant">Cantidad</label>-->
+<!--                <input type="Cantidad" class="form-control" id="inputCant">-->
+<!--            </div>-->
+
+<!--            <a href="/pedido/update"type="button" class="btn btn-outline-success">Enviar</a>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="POST"> {% csrf_token %}
+        <h1>Pedir Medicamento</h1>
+            {{ form|crispy }}
+        <br>
+        <input class="btn btn-outline-secondary" type="submit" value="Enviar"/>
+    </form>
+    <br>
+    <br>
+    <a href="{% url 'ui_paciente' %}" class="button" style="color: lightskyblue">VOLVER</a>
+
+{% endblock %}

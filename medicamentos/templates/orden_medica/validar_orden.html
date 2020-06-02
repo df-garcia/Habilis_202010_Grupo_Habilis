@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method='GET' action="{% url 'orden_encontrada' %}"> {% csrf_token %}
+        <h1><label for="numReg">Número de Solicitud: </label></h1>
+        <div class="row">
+            <div class="col-md-12">
+                <input class="form-control" name="q" type="number" placeholder="Ingrese el número de solicitud" id="numReg" required/>
+            </div>
+        </div>
+    </form>
+{% endblock %}

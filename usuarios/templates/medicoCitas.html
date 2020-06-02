@@ -1,0 +1,25 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<br>
+<h3>Citas registradas</h3>
+<div class="card-columns">
+    {% if tags %}
+        {% for tag in tags %}
+            {% for cita in tag.citas %}
+                <div class="card" style="width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ cita.tipo }}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ cita.fecha }}</h6>
+                        
+                            <p class="card-text">Paciente: {{ cita.paciente__nombre }}</p>
+                        
+                        <!-- <a href="#" class="btn btn-primary stretched-link">Learn More</a> -->
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</div><!-- end div card columns -->
+
+{% endblock content %}

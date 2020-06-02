@@ -1,0 +1,33 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <div class="card-deck">
+        <div class="card" style="width: 30rem;">
+        <img src="https://st4.depositphotos.com/3369547/24022/v/450/depositphotos_240225970-stock-illustration-medical-order-checklist-with-pill.jpg" class="card-img-top" alt="Card image cap">
+            <div class="card-body">
+                <h1 class="card-title">CREAR ORDEN</h1>
+                <p class="card-text">Crear una nueva orden de medicamentos.</p>
+                <a href="http://127.0.0.1:8000/usuarios/formulario/" class="btn btn-primary">Continuar</a>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+        <img src="https://image.freepik.com/vector-gratis/diseno-ilustracion-vector-icono-orden-medica-aislado_24877-18766.jpg" class="card-img-top" alt="Card image cap">
+            <div class="card-body">
+                <h1 class="card-title">CONSULTAR CITAS</h1>
+                <p class="card-text">Consulte las citas médicas programadas o en las que ya ha participado.</p>
+                <a href="http://127.0.0.1:8000/usuarios/citas/" class="btn btn-primary">Continuar</a>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+          <img src="https://img.freepik.com/vector-gratis/medicina-diseno-plano_1212-670.jpg?size=338&ext=jpg" class="card-img-top" alt="Card image cap">
+              <div class="card-body">
+                  <h1 class="card-title">VER ÓRDENES</h1>
+                  <p class="card-text">Consulte las órdenes de medicamentos anteriormente gestionadas.</p>
+                  <a href="http://127.0.0.1:8000/usuarios/ordenes/" class="btn btn-primary">Continuar</a>
+              </div>
+          </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% include 'messages.html' %}
+
+<form method="POST" data-spy="scroll"> {% csrf_token %}
+    <br>
+    <h3>Formulario orden médica</h3>
+    <br>
+    {{ form|crispy }}
+    <input class="btn btn-outline-secondary" type="submit" value="Enviar"/>
+</form>
+
+{% endblock %}
